@@ -5,7 +5,7 @@ const UserBlog = () => {
 
   const [user, setUser] = useState()
 
-  const id = localStorage.getItem("userId");
+//   const id = localStorage.getItem("userId");
 
 //   const sendRequest = async()=>{
 //     const res = await axios.get(`http://localhost:5000/api/blog/user/${id}`)
@@ -15,6 +15,9 @@ const UserBlog = () => {
 //   }
 
   useEffect(() => {
+    
+    const id = localStorage.getItem("userId");
+    
       const sendRequest = async()=>{
     const res = await axios.get(`http://localhost:5000/api/blog/user/${id}`)
     .catch((err)=> console.log(err))
