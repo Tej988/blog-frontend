@@ -7,14 +7,21 @@ const UserBlog = () => {
 
   const id = localStorage.getItem("userId");
 
-  const sendRequest = async()=>{
+//   const sendRequest = async()=>{
+//     const res = await axios.get(`http://localhost:5000/api/blog/user/${id}`)
+//     .catch((err)=> console.log(err))
+//     const data = await res.data;
+//     return data;
+//   }
+
+  useEffect(() => {
+      const sendRequest = async()=>{
     const res = await axios.get(`http://localhost:5000/api/blog/user/${id}`)
     .catch((err)=> console.log(err))
     const data = await res.data;
     return data;
   }
-
-  useEffect(() => {
+    
     sendRequest().then((data)=> setUser(data.user))
   
   }, [])
