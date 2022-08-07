@@ -35,7 +35,7 @@ const AddBlog = () => {
   const handleSumbit = (e) => {
     e.preventDefault();
     console.log(inputs)
-    sendRequest().then((data) => console.log(data)) .then(()=> navigate("/blogs"))
+    sendRequest().then((data) => console.log(data)).then(()=> navigate("/blogs"))
    
   }
 
