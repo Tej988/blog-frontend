@@ -25,7 +25,7 @@ function App() {
          <Route path="/myBlogs/:id" element={<BlogDetail/>} />
          <Route path="/blogs/add" element={<AddBlog/>} />
        </Routes>
-  <Blogs/>
+//   <Blogs/>
      </main>
    </>
   );
