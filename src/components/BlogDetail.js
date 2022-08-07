@@ -28,19 +28,24 @@ const BlogDetail = () => {
 
 
 
-  
+ 
+  useEffect(() => {
+
+
+ 
   const fetchDetails = async () => {
     const res = await axios.get(`http://localhost:5000/api/blog/${id}`).catch(err => console.log(err))
 
     const data = await res.data;
     return data;
   }
-  useEffect(() => {
+
+
     fetchDetails().then(data =>{ 
       setBlog((data.blog))
       setInputs({title:data.blog.title, description:data.blog.description})
     })
-  }, [id])
+  },[id])
 
   const sendRequest = async () =>{
     const res = axios.put(`http://localhost:5000/api/blog/update/${id}`,{
