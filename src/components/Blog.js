@@ -14,7 +14,7 @@ const Blog = ({ title, description, image, userName,isUser,id }) => {
         navigate(`/myBlogs/${id}`)
     }
     const deleteRequest= async()=>{
-        const res = await axios.delete(`http://localhost:5000/api/blog/${id}`).catch(
+        const res = await axios.delete(`https://xenon-blog.herokuapp.com/api/blog/${id}`).catch(
             err=>console.log(err)
         )
         const data =await  res.data;
