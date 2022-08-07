@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { Box } from '@mui/system'
-import { Button, TextField, placeholder, Typography } from '@mui/material'
+import { Button, TextField, Typography } from '@mui/material'
 import axios from 'axios';
 import { useDispatch } from 'react-redux';
 import { authActions } from '../store'
